@@ -15,12 +15,17 @@ public class Start {
         person.setSurname(scanner.nextLine());
         System.out.printf("Tha surname of the person is %s %n", person.getSurname());
 
-        System.out.print("Insert the height of the person: ");
-        person.setHeight((scanner.nextDouble()));
-        System.out.printf("Tha height of the person is %s %n", person.getHeight());
 
+        System.out.print("Insert the height of the person: ");
+
+        if(scanner.hasNextDouble()){
+            person.setHeight((scanner.nextDouble()));
+            System.out.printf("Tha height of the person is %s %n", person.getHeight());
+        }
         System.out.print("Insert the age of the person: ");
-        person.setAge((scanner.nextInt()));
-        System.out.printf("Tha age of the person is %s %n", person.getAge());
+        if(scanner.hasNextInt()){
+            person.setAge((scanner.nextInt()));
+            System.out.printf("Tha age of the person is %s %n", person.getAge());
+        }
     }
 }
