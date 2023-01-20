@@ -7,8 +7,6 @@ public class Person{
     private int age;
 
     public String stringValidation(String getSomething){
-        this.setSurname(getSomething);
-        this.setName(getSomething);
         try {
             int i = Integer.parseInt(getSomething);
             System.out.println(i + " is not a string");
@@ -17,6 +15,19 @@ public class Person{
              return getSomething;
         }
         return null;
+    }
+
+    public void getData(String name, String surname, float height, int age ){
+        this.name = name;
+        this.surname = surname;
+        this.height = height;
+        this.age = age;
+    }
+    public void setData(){
+        System.out.printf("Tha name of the person is %s %n", name);
+        System.out.printf("Tha surname of the person is %s %n", surname);
+        System.out.printf("Tha height of the person is %s %n", height);
+        System.out.printf("Tha age of the person is %s %n", age);
     }
 
     public String getName() {
@@ -35,7 +46,7 @@ public class Person{
         this.surname = surname;
     }
 
-    public double getHeight() {
+    public float getHeight() {
         return height;
     }
 
